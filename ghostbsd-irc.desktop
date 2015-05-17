@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=ghostbsd-irc
+Icon=ghostbsd-irc
+Name=GhostBSD-irc
+GenericName=IRC Chat #ghostbsd
+GenericName[de]=IRC Chat #ghostbsd-de
+GenericName[ru]=Чат в канале #ghostbsd
+Categories=Network;
