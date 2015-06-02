@@ -454,7 +454,7 @@ else
     [ -x "$KONVERSATION" ] && irc_konversation
     [ -x "$KSIRC" ] && exec "$KSIRC" --server "$FLL_IRC_SERVER" --channel "$FLL_IRC_CHANNEL" --nick "$NICK"
     [ -x "$KVIRC" ] && irc_kvirc
-    [ -x "$XCHAT" ] && [ "$use_xchat" = "1" ] && irc_xchat
+    [ -x "$XCHAT" ] && [ "$use_xchat" = "0" ] && irc_xchat
 
     # nasty fallback, but well - it works ;)
     TERMPATH=$(readlink -f /etc/alternatives/x-terminal-emulator)
