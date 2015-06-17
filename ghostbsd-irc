@@ -38,15 +38,15 @@ XTERM_OPT="-e"
 MKTEMP="$(which mktemp)"                  || MKTEMP="/bin/mktemp"
 SSFTSH="$(which ssft.sh)"                 || SSFTSH="/usr/bin/ssft.sh"
 SU="$(which su)"                          || SU="/bin/su"
-XTERMINAL="$(which x-terminal-emulator)"  || XTERMINAL="/usr/bin/x-terminal-emulator"
+XTERMINAL="$(which x-terminal-emulator)"  || XTERMINAL="/usr/local/bin/x-terminal-emulator"
 
-HEXCHAT="$(which hexchat)"                || HEXCHAT="/usr/bin/hexchat"
-IRSSI="$(which irssi)"                    || IRSSI="/usr/bin/irssi"
-KONVERSATION="$(which konversation)"      || KONVERSATION="/usr/bin/konversation"
-KSIRC="$(which ksirc)"                    || KSIRC="/usr/bin/ksirc"
-KVIRC="$(which kvirc)"                    || KVIRC="/usr/bin/kvirc"
-WEECHAT="$(which weechat-curses)"         || WEECHAT="/usr/bin/weechat-curses"
-XCHAT="$(which xchat)"                    || XCHAT="/usr/bin/xchat"
+HEXCHAT="$(which hexchat)"                || HEXCHAT="/usr/local/bin/hexchat"
+IRSSI="$(which irssi)"                    || IRSSI="/usr/local/bin/irssi"
+KONVERSATION="$(which konversation)"      || KONVERSATION="/usr/local/bin/konversation"
+KSIRC="$(which ksirc)"                    || KSIRC="/usr/local/bin/ksirc"
+KVIRC="$(which kvirc)"                    || KVIRC="/usr/local/bin/kvirc"
+WEECHAT="$(which weechat-curses)"         || WEECHAT="/usr/local/bin/weechat-curses"
+XCHAT="$(which xchat)"                    || XCHAT="/usr/local/bin/xchat"
 
 # internal functions
 # internal functions
@@ -383,9 +383,9 @@ irc_xchat() {
 
 # internal functions
 irc_check_environ() {
-    use_xchat=0
+    use_hexchat=1
     if [ -n "${GDMSESSION}"  ] || [ "${DESKTOP_SESSION}" = "LXDE" ]; then
-        use_hexchat=1
+        use_xchat=0
     fi
 }
 
